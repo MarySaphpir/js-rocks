@@ -1,10 +1,1 @@
-function sum(number) {
-    let currentSum = number;
-
-    function nextSum(nextNumber) {
-        currentSum += nextNumber;
-        return nextSum;
-    }
-
-    return nextSum;
-}
+const sum = a => b => b ? sum( a + b ) : a;
