@@ -1,4 +1,4 @@
-function compare(arr1, arr2) {
+function compare1(arr1, arr2) {
     const similarities = [];
     arr1.forEach( element => {
         if (arr2.includes(element)) {
@@ -6,4 +6,8 @@ function compare(arr1, arr2) {
         }
     });
     return similarities;
+}
+
+function compare2(arr1, arr2) {
+    return arr1.filter( element => arr2.includes(element));
 }
