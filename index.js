@@ -18,3 +18,8 @@ function changePlace(arr) {
     arr[smallestIndex] = biggestValue;
     return arr;
 }
+
+// get repeated values
+function getRepeatedValues(arr) {
+    return arr.filter((value, index, array) => array.indexOf(value) !== index);
+}
