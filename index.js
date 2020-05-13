@@ -19,6 +19,15 @@ function changePlace(arr) {
     return arr;
 }
 
+function changePlace2(arr) {
+    const maxValue = Math.max.apply(null, arr);
+    const minValue = Math.min.apply(null, arr);
+
+    arr[arr.indexOf(maxValue)] = minValue;
+    arr[arr.indexOf(minValue)] = maxValue;
+    return arr;
+}
+
 // get repeated values
 function getRepeatedValues(arr) {
     return arr.filter((value, index, array) => array.indexOf(value) !== index);
