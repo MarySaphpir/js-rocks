@@ -17,3 +17,11 @@ function stringy(size) {
     }
     return arr.join('');
 }
+
+// Sum of two min values
+function sum(arr) {
+    const firstMinValue = Math.min.apply(null, arr);
+    const filteredArray = arr.filter(element => element !== firstMinValue);
+    const secondMinValue = Math.min.apply(null, filteredArray);
+    return firstMinValue + secondMinValue;
+}
