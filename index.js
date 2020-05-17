@@ -25,3 +25,8 @@ function sum(arr) {
     const secondMinValue = Math.min.apply(null, filteredArray);
     return firstMinValue + secondMinValue;
 }
+
+// List Filtering
+function filter(arr) {
+    return arr.filter(element => typeof element !== 'string');
+}
