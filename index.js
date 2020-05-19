@@ -26,6 +26,25 @@ function sum(arr) {
     return firstMinValue + secondMinValue;
 }
 
+// Find the divisors!
+function findDivisors(number) {
+    const arr = [];
+    for(let i = 2; i < number; i++) {
+        if(number % i === 0) {
+            arr.push(i);
+        }
+    }
+    if (arr.length === 0) {
+        return `${number} is prime`;
+    }
+    return arr;
+}
+
+// Two Sum
+function twoSum(arr, target) {
+    return '';
+}
+
 // List Filtering
 function filter(arr) {
     return arr.filter(element => typeof element !== 'string');
