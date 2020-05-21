@@ -5,6 +5,11 @@ function objectCreate(obj) {
     return new Constructor();
 }
 
+// Object.bind polyfill
+function objectBind(obj) {
+
+}
+
 // Stringy Strings
 function stringy(size) {
     let arr = [];
@@ -42,7 +47,13 @@ function findDivisors(number) {
 
 // Two Sum
 function twoSum(arr, target) {
-    return '';
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if (j !== i && arr[i] + arr[j] === target) {
+                return `(${i}, ${j})`;
+            }
+        }
+    }
 }
 
 // List Filtering
