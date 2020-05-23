@@ -5,9 +5,12 @@ function objectCreate(obj) {
     return new Constructor();
 }
 
-// Object.bind polyfill
-function objectBind(obj) {
-
+// Function.bind polyfill
+function functionBind(context) {
+    const fn = this;
+    return function () {
+        return fn.apply(context);
+    };
 }
 
 // Stringy Strings
